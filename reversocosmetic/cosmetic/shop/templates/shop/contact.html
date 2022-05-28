@@ -1,0 +1,47 @@
+{% extends 'shop/basic.html' %}
+
+{% block title%} Contact - Reverso Solutions{% endblock %}
+{% block css %}
+.row
+{
+padding-top: 5px;
+}
+
+ {% endblock %}
+
+
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+     <div class="row">
+         <div class="col ">
+     <h3><br>Contact Us         </h3>
+     <form action="/shop/contact/" method="post" action="/shop" onSubmit="alert('Thank you for contacting will connect with you as soon as possible');">{% csrf_token %}
+  <div class="form-group">
+    <label for="name">Name<font color ="red">* </font> </label>
+    <input type="text" class="form-control" id="name" name="name" required="required" placeholder="Enter Your Name">
+  </div>
+          <div class="form-group">
+    <label for="name">Email</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+  </div>
+          <div class="form-group">
+    <label for="name">Phone<font color ="red">*</font></label>
+    <input type="tel" class="form-control" id="phone" name="phone" required="required" placeholder="Enter Your Phone Number">
+  </div>
+          <div class="form-group">
+   <div class="form-group">
+    <label for="desc">How May We Help You ?</label>
+    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+  </div>
+              <button type="submit" class="btn btn-success">Submit</button>
+          </div>
+
+  </div>
+
+
+        <div class="col md-2">
+              <div class="col-md-12 offset-1 a"><br><br><h3> For more details call or email us:</h3><br><br><h3> Contact Person: Shah Faisal <br> Mobile: +91- 9082722698 <br>Email: shahfaisal@reversosolutions.in </h3></div>
+        </div>
+              </div>
+     </div>
+              {% endblock %}
